@@ -1,4 +1,4 @@
-<div ng-repeat="(key, value) in homeCtrl.channels | orderBy: 'time' | map: toLocaleDate | groupBy: 'time'">
+<div ng-repeat="(key, value) in homeCtrl.channels | orderBy: '-time' | map: toLocaleDate | groupBy: 'time'">
     <h2 class="head-group">{{ key | groupDate}}</h2>
     <div class="list-group">
         <a href="#" class="list-group-item" ng-repeat="channel in value | orderBy: 'time'">
