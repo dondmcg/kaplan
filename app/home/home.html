@@ -1,0 +1,21 @@
+<div ng-repeat="(key, value) in homeCtrl.channels | orderBy: 'time' | map: toLocaleDate | groupBy: 'time'">
+    <h2 class="head-group">{{ key | groupDate}}</h2>
+    <div class="list-group">
+        <a href="#" class="list-group-item" ng-repeat="channel in value | orderBy: 'time'">
+            <div class="subject-img" ng-hide="!channel.instructorPhotoUrl">
+                <img src="{{channel.subjectPhotoUrl}}" class="img-circle" width="45" height="45"/>
+            </div>
+            <div class="subject-info">
+                <h3 class="subject-title">{{channel.title}}</h3>
+                <p>{{channel.description}}</p>
+            </div>
+            <div class="author-img" ng-hide="!channel.instructorPhotoUrl">
+                <img src="{{channel.instructorPhotoUrl}}" class="img-circle" width="45" height="45" />
+            </div>
+            <div class="author-name">
+                {{channel.instructorName}}
+            </div>
+            <div class="when">{{channel.time | timeOfLecture}}</div>
+        </a>
+    </div>
+</div>

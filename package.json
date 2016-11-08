@@ -1,0 +1,35 @@
+{
+  "name": "kaplan",
+  "version": "1.0.0",
+  "description": "Kaplan Test AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve app --port 4040 && live-server",
+    "build-css": "node-sass --include-path scss app/dist/scss/main.scss app/styles/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "angular",
+    "kaplan"
+  ],
+  "author": "Don McGrath",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-filter": "^0.5.11",
+    "angular-resource": "^1.5.0",
+    "angular-route": "^1.4.9",
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {
+    "live-server": "^0.9.1",
+    "lodash": "^4.6.0",
+    "node-sass": "^3.11.2",
+    "nodemon": "^1.11.0",
+    "serve": "^1.4.0"
+  }
+}

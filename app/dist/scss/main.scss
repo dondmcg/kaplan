@@ -1,0 +1,40 @@
+.head-group{
+  font-weight: bold;
+  padding: 20px 0 15px 0;
+}
+.list-group-item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding: 20px;
+  .subject-img {
+    flex: .4;
+    justify-content: center;
+  }
+  .subject-info {
+    flex: 3;
+    justify-content: center;
+    .subject-title {
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+  }
+  .author-img {
+    flex: .4;
+    justify-content: center;
+  }
+  .author-name {
+    flex: 1;
+    justify-content: center;
+    white-space: no-wrap;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+  .when {
+    flex: 1.5;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
+
